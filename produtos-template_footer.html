@@ -1,0 +1,18 @@
+<script>
+    // [ Sabores Slider ]
+    // Get the name of the current flavor
+    let flavorName = $(".sabores-slider_selector").attr("produto-sabor");
+    // Locate the flavor inside the slider
+    let slideFlavor = $(".sabores-slider_list").find("[" + saborNome +"]");
+    // Move the slide to the first position
+    slideFlavor.eq(0);
+    // Initiate the slider
+    $('.sabores-slider_list').slick({
+        infinite: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $("#sabores-prev"),
+        nextArrow: $("#sabores-next"),
+    });
+</script>
