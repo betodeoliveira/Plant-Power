@@ -4,6 +4,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 
 <script>
+    // [ Footer copyright] 
+    $('.footer_copyright-year').text(new Date().getFullYear());
+
     // [ Button Animated  ]
     $(".button-animated").each(function () {
         let timeline = gsap.timeline({ paused: true });
