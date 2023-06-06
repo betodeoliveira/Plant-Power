@@ -1,0 +1,16 @@
+<script>
+    // [ Button Animated  ]
+    $(".button-animated").each(function () {
+        let timeline = gsap.timeline({ paused: true });
+        let background = $(this).find(".button-animated_background");
+        $(this).on("mouseenter", function () {
+            timeline.to(background, { width: "3rem", duration: 0.3, ease: "sine.inOut" });
+            timeline.pause();
+            timeline.play();
+        });
+        $(this).on("mouseleave", function () {
+            timeline.pause();
+            timeline.reverse();
+        });
+    });
+</script>
