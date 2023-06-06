@@ -5,7 +5,7 @@
     // Get the name of the current flavor
     let flavorName = $(".sabores-slider_selector").attr("produto-sabor");
     // Locate the flavor inside the slider
-    let slideFlavor = $(".sabores-slider_list").find("[" + saborNome +"]");
+    let slideFlavor = $(".sabores-slider_list").find("[" + flavorName +"]");
     // Move the slide to the first position
     slideFlavor.eq(0);
     // Initiate the slider
