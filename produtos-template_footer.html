@@ -8,7 +8,7 @@
     // Locate the flavor inside the slider
     let slideFlavor = $(".sabores-slider_list").find("[produto-sabor=" + flavorName +"]");
     // Move the slide to the first position
-    $(slideFlavor).siblings().eq(1).insertBefore();
+    $(slideFlavor).after($(".sabores-slider_item").eq(0));
     // Initiate the slider
     $('.sabores-slider_list').slick({
         infinite: false,
