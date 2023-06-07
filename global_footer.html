@@ -11,8 +11,12 @@
     $(".button-animated").each(function () {
         let timeline = gsap.timeline({ paused: true });
         let background = $(this).find(".button-animated_background");
+        let hoverWidth = "3rem";
+        if($(this).hasClass("is-small")) {
+            hoverWidth = "2.5rem";
+        }
         $(this).on("mouseenter", function () {
-            timeline.to(background, { width: "3rem", duration: 0.3, ease: "sine.inOut" });
+            timeline.to(background, { width: hoverWidth, duration: 0.3, ease: "sine.inOut" });
             timeline.pause();
             timeline.play();
         });
