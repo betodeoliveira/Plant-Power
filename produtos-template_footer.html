@@ -1,12 +1,12 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script>
-    // [ Sabores Slider ]
+    // [ Slider - Sabores ]
     // Get the name of the current flavor
     let flavorName = $(".sabores-slider_selector").attr("produto-sabor");
 
     // Locate the flavor inside the slider
-    let slideFlavor = $(".sabores-slider_list").find("[produto-sabor=" + flavorName +"]");
+    let slideFlavor = $(".sabores-slider_list").find("[produto-sabor=" + flavorName + "]");
     // Move the slide to the first position
     $(slideFlavor).after($(".sabores-slider_item").eq(0));
     // Initiate the slider
@@ -19,12 +19,42 @@
         nextArrow: $("#sabores-next"),
     });
 
+    // [ Slider - Mais Produtos ]
+    $('.mais-produtos_list').slick({
+        infinite: false,
+        speed: 500,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        prevArrow: $("#mais-produtos-prev"),
+        nextArrow: $("#mais-produtos-next"),
+        responsive: [
+            {
+                breakpoint: 2020,
+                settings: {
+                    slidesToShow: 5,
+                }
+            },
+            {
+                breakpoint: 1550,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 1150,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+        ]
+    });
+
     // [ Float Button ] 
     let floatButtomTimeline = gsap.timeline({ paused: true });
-    floatButtomTimeline.fromTo(".float-button_buttons-wrapper",{width: "0rem", opacity: 0}, { 
+    floatButtomTimeline.fromTo(".float-button_buttons-wrapper", { width: "0rem", opacity: 0 }, {
         width: "18rem",
         opacity: 1,
-        duration: 0.5, 
+        duration: 0.5,
         ease: "sine.inOut"
     });
 
