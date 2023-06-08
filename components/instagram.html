@@ -1,0 +1,15 @@
+<script>
+    var Webflow = Webflow || [];
+    Webflow.push(function () {
+        let instagramTimeline = gsap.timeline({ paused: true });
+        instagramTimeline.to(".instagram_list", {
+            x: "0%",
+            scrollTrigger: {
+                trigger: ".instagram_wrapper",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1
+            }
+        });
+    });
+</script>
