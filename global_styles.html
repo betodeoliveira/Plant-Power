@@ -106,7 +106,7 @@
         display: none !important;
     }
 
-    @media screen and (max-width: 991px), 
+    @media screen and (max-width: 991px),
     @media screen and (max-width: 767px),
     @media screen and (max-width: 479px) {
 
@@ -250,12 +250,28 @@
         contain: paint;
     }
 
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .navbar_menu-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .navbar_menu-wrapper {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
     @media screen and (min-width: 992px) and (max-width: 1366px) {
-        h1, .heading-style-h1 {
+
+        h1,
+        .heading-style-h1 {
             font-size: 4rem;
         }
 
-        h2, .heading-style-h2 {
+        h2,
+        .heading-style-h2 {
             font-size: 2.5rem;
         }
     }

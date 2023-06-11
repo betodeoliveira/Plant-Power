@@ -4,6 +4,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 
 <script>
+    // [ Navbar ]
+    ScrollTrigger.create({
+        trigger: ".navbar_trigger",
+        start: "bottom top",
+        end: "+=0%",
+        onEnter: () => {
+            gsap.to(".navbar_background",{ opacity: 1, duration: 0.3, ease: "sine.inOut"});
+        },
+        onEnterBack: () => {
+            gsap.to(".navbar_background",{ opacity: 0, duration: 0.3, ease: "sine.inOut"});
+        } 
+    });
+
     // [ Footer copyright] 
     $('.footer_copyright-year').text(new Date().getFullYear());
 
