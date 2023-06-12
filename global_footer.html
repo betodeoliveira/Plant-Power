@@ -28,8 +28,8 @@
         if($(this).hasClass("is-small")) {
             hoverWidth = "2.5rem";
         }
+        timeline.to(background, { width: hoverWidth, duration: 0.25, ease: "sine.inOut" });
         $(this).on("mouseenter", function () {
-            timeline.to(background, { width: hoverWidth, duration: 0.3, ease: "sine.inOut" });
             timeline.pause();
             timeline.play();
         });

@@ -93,19 +93,19 @@
 
     // [ Float Button ] 
     let floatButtomTimeline = gsap.timeline({ paused: true });
-    floatButtomTimeline.fromTo(".float-button_buttons-wrapper", { width: "0rem", opacity: 0 }, {
+    floatButtomTimeline.fromTo(".corner-button_buttons-wrapper", { width: "0rem", opacity: 0 }, {
         width: "18rem",
         opacity: 1,
         duration: 0.5,
         ease: "sine.inOut"
     });
 
-    $(".float-button_component").on("mouseenter", function () {
+    $(".corner-button_component").on("mouseenter", function () {
         floatButtomTimeline.pause();
         floatButtomTimeline.play();
     });
 
-    $(".float-button_component").on("mouseleave", function () {
+    $(".corner-button_component").on("mouseleave", function () {
         floatButtomTimeline.pause();
         floatButtomTimeline.reverse();
     });
