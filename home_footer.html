@@ -1,34 +1,18 @@
+<!-- Slick Slider -->
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script>
-    // [ Slider - Sabores ]
-    // Get the name of the current flavor
-    let flavorName = $(".flavors-slider_selector").attr("produto-sabor");
-
-    // Locate the flavor inside the slider
-    let slideFlavor = $(".flavors-slider_list").find("[produto-sabor=" + flavorName + "]");
-    // Move the slide to the first position
-    $(slideFlavor).after($(".flavors-slider_item").eq(0));
-    // Initiate the slider
-    $('.flavors-slider_list').slick({
-        infinite: false,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: $("#sabores-prev"),
-        nextArrow: $("#sabores-next"),
-    });
-
-    // [ Slider - Mais Produtos ]
+    // [ Best Sellers Slider ]
     $('.produtcs-slider_list').slick({
         infinite: false,
+        centerMode: false,
         speed: 500,
-        slidesToShow: 6.25,
+        slidesToShow: 6,
         slidesToScroll: 1,
-        prevArrow: $("#more-products-prev"),
-        nextArrow: $("#more-products-next"),
+        prevArrow: $("#best-products-prev"),
+        nextArrow: $("#best-products-next"),
         responsive: [
-            {
+        {
                 breakpoint: 2020,
                 settings: {
                     slidesToShow: 5.5,
@@ -89,24 +73,5 @@
                 }
             },
         ]
-    });
-
-    // [ Float Button ] 
-    let floatButtomTimeline = gsap.timeline({ paused: true });
-    floatButtomTimeline.fromTo(".float-button_buttons-wrapper", { width: "0rem", opacity: 0 }, {
-        width: "18rem",
-        opacity: 1,
-        duration: 0.5,
-        ease: "sine.inOut"
-    });
-
-    $(".float-button_component").on("mouseenter", function () {
-        floatButtomTimeline.pause();
-        floatButtomTimeline.play();
-    });
-
-    $(".float-button_component").on("mouseleave", function () {
-        floatButtomTimeline.pause();
-        floatButtomTimeline.reverse();
     });
 </script>
