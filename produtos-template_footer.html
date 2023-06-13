@@ -2,8 +2,14 @@
 
 <script>
     // [ Slider - Sabores ]
-    // Get the name of the current flavor
+    let flavorType = $(".flavors-slider_selector").attr("produto-tipo");
     let flavorName = $(".flavors-slider_selector").attr("produto-sabor");
+
+    $(".flavors-slider_item").each(function () {
+        if($(this).attr("produto-tipo") != flavorType) {
+            $(this).remove();
+        }
+    });
 
     // Locate the flavor inside the slider
     let slideFlavor = $(".flavors-slider_list").find("[produto-sabor=" + flavorName + "]");
