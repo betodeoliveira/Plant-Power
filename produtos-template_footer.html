@@ -1,7 +1,7 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script>
-    // [ Remove Temp FLavors Section]
+    // [ Remove Temp Flavors Section]
     $( ".section_temp-flavors" ).remove();
 
     // [ Slider - Sabores ]
@@ -17,7 +17,8 @@
     // Locate the flavor inside the slider
     let slideFlavor = $(".flavors-slider_list").find("[produto-sabor=" + flavorName + "]");
     // Move the slide to the first position
-    $(slideFlavor).after($(".flavors-slider_item").eq(0));
+    $(slideFlavor).prependTo($(".flavors-slider_list"));
+
     // Initiate the slider
     $('.flavors-slider_list').slick({
         infinite: false,
